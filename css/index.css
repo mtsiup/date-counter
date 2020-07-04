@@ -100,10 +100,10 @@ h1 {
  
 .slide{
 	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
+	left: 1px;
+	top: 1px;
+	width: 50%;
+	height: 50%;
 	opacity: 0;
 	z-index: 1;
  
@@ -119,6 +119,60 @@ h1 {
 }
  
 img {
-width:100%;
+width:40%;
 height:auto;
+}
+
+------календар
+
+.calendar {
+  border: 1px solid #909090;
+  border-collapse: collapse;
+  font-family: Arial;
+  font-size: 11px;
+}
+/* Заголовок */
+.calendar th {
+  text-align: right;
+  width: 30px;
+  height: 30px;
+  background: #D0D0D0;
+  color: #000000;
+  border: 1px solid #909090;   
+}
+/* Заголовок праздника */
+.calendar th.holiday {
+  color: #FF0000;
+}
+/* Ячейка дня */
+.calendar td {
+  text-align: right;
+  width: 20px;
+  height: 18px;
+  padding-right: 4px;
+  border: 1px solid #909090;
+  cursor: pointer;  font-size: 12px;
+}
+/* Затемненный день */
+.calendar td.grayed {
+  background: #F0F0F0;
+  cursor: auto !important;
+}
+/* Выбранный день */
+.calendar td.selected {
+  background: #6DAFBF;
+  color: #FFFFFF;
+  box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset;
+}
+/* Праздничный день */
+.calendar td.holiday {
+  color: #FF0000;
+}
+/* Кнопки навигации */
+.calendar td.navigation {
+  text-align: center;
+  border: 0px none !important;
+  font-size: 17px;
+  cursor: pointer;
+  white-space: nowrap;        
 }
