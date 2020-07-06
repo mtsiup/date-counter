@@ -1,68 +1,60 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 body {
-  background-image: url('https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80');
-  background-repeat: no-repeat;
+  background-image: url('https://cdn.pixabay.com/photo/2017/01/24/03/53/plant-2004483_1280.jpg'); 
   background-size: cover;
   background-position: center center;
+  max-width: 980px;
+  margin: auto;
   height: 100vh;
-  color: rgb(231, 235, 8);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Concert One', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0;
-  overflow: hidden;
+  color: rgb(0, 0, 0);
 }
 
-/* Add a dark overlay */
-body::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+.section-left { 
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  width: 50%;
+  text-align: center; 
+ }
+           
+.section-right { 
+  position: absolute; 
+  right: 0; 
+  top: 0; 
+  width: 50%; } 
 
-body * {
-  z-index: 1;
-}
-
-h1 {
-  font-size: 60px;
-  margin: -80px 0 40px;
-}
-
-.year {
-  font-size: 200px;
+ .year {
+  font-size: 40px;
   z-index: -1;
   opacity: 0.2;
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+} 
+
+h1 {
+  font-size: 35px;
+  margin: 10px;
 }
 
-.countdown {
-  /* display: flex; */
-  display: none;
-  transform: scale(2);
-}
-
-.time {
+ .time, .time2{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 15px;
+  margin: 0;
+} 
+
+#days2, #hours2, #minutes2, #seconds2 {
+  margin: 5px;
 }
 
 .time h2 {
@@ -70,8 +62,8 @@ h1 {
 }
 
 @media (max-width: 500px) {
-  h1 {
-    font-size: 45px;
+  h2 {
+    font-size: 60px;
   }
 
   .time {
@@ -84,28 +76,34 @@ h1 {
   }
 
   .time small {
-    font-size: 10px;
+    font-size: 15px;
   }
-}
+} 
 
-
-
---------------------
-#slides{
+ #slides{
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between; 
+  text-align: center;
+  margin: auto;
 	position: relative;
 	padding: 0px;
-	margin: 0px;
-	list-style-type: none;
+  list-style-type: none;
+  z-index: 999999;
 }
  
 .slide{
-	position: absolute;
-	left: 1px;
-	top: 1px;
-	width: 50%;
-	height: 50%;
+  border-radius: 15px;
+  position: absolute;
+  text-align: center; 
+	left: 50px;
+  top: 1px;
+	width: 80%;
+	height: 80%;
 	opacity: 0;
-	z-index: 1;
+	z-index: 999999;
  
 	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
@@ -114,65 +112,14 @@ h1 {
 }
  
 .showing{
+  border-radius:15px;
 	opacity: 1;
-	z-index: 2;
+	z-index: 999999;
 }
  
 img {
-width:40%;
+border-radius:15px;
+width:100%;
 height:auto;
-}
-
-------календар
-
-.calendar {
-  border: 1px solid #909090;
-  border-collapse: collapse;
-  font-family: Arial;
-  font-size: 11px;
-}
-/* Заголовок */
-.calendar th {
-  text-align: right;
-  width: 30px;
-  height: 30px;
-  background: #D0D0D0;
-  color: #000000;
-  border: 1px solid #909090;   
-}
-/* Заголовок праздника */
-.calendar th.holiday {
-  color: #FF0000;
-}
-/* Ячейка дня */
-.calendar td {
-  text-align: right;
-  width: 20px;
-  height: 18px;
-  padding-right: 4px;
-  border: 1px solid #909090;
-  cursor: pointer;  font-size: 12px;
-}
-/* Затемненный день */
-.calendar td.grayed {
-  background: #F0F0F0;
-  cursor: auto !important;
-}
-/* Выбранный день */
-.calendar td.selected {
-  background: #6DAFBF;
-  color: #FFFFFF;
-  box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset;
-}
-/* Праздничный день */
-.calendar td.holiday {
-  color: #FF0000;
-}
-/* Кнопки навигации */
-.calendar td.navigation {
-  text-align: center;
-  border: 0px none !important;
-  font-size: 17px;
-  cursor: pointer;
-  white-space: nowrap;        
+margin:15px;
 }
